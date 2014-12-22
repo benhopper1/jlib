@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="300dp"
+    android:layout_height="193dp"
+    android:background="@drawable/remoterecord_bkg0"
+    android:gravity="start"
+    android:keepScreenOn="true"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp" >
+
+        <ImageView
+            android:id="@+id/iv_light_0"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:scaleType="centerCrop"
+            android:src="@drawable/stat_light_null" />
+
+        <ImageView
+            android:id="@+id/iv_light_1"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:scaleType="centerCrop"
+            android:src="@drawable/stat_light_null" />
+
+        <ImageView
+            android:id="@+id/iv_light_2"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:scaleType="centerCrop"
+            android:src="@drawable/stat_light_null" />
+
+        <ImageView
+            android:id="@+id/iv_light_3"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:scaleType="centerCrop"
+            android:src="@drawable/stat_light_null" />
+
+        <ImageView
+            android:id="@+id/iv_light_4"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:scaleType="centerCrop"
+            android:src="@drawable/stat_light_null" />
+    </LinearLayout>
+
+    <ImageButton
+        android:id="@+id/ib_review_rr"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignRight="@+id/linearLayout1"
+        android:layout_marginBottom="17dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/play2" />
+
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/linearLayout1"
+        android:layout_centerVertical="true"
+        android:src="@drawable/arfdog" />
+
+    <EditText
+        android:id="@+id/et_caption_rr"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/ib_review_rr"
+        android:layout_alignLeft="@+id/imageView1"
+        android:ems="10"
+        android:hint="Caption"
+        android:inputType="textPersonName"
+        android:textColor="#000000" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="140dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/imageView1"
+        android:layout_alignParentRight="true"
+        android:src="@drawable/arf_logo" />
+
+</RelativeLayout>
