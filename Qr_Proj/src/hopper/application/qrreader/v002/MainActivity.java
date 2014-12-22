@@ -27,12 +27,12 @@ import hopper.library.http.Upload_frag;
 import hopper.library.http.Upload_frag.OnUploadListener;
 import hopper.library.local.store.LocalUserStore;
 import hopper.library.phone.CallLog;
-import hopper.library.phone.PhoneCallReceiver;
-import hopper.library.phone.PhoneCallReceiver.OnAnswerCallListener;
-import hopper.library.phone.PhoneCallReceiver.OnAutoAnswerCallListener;
-import hopper.library.phone.PhoneCallReceiver.OnEndCallListener;
-import hopper.library.phone.PhoneCallReceiver.OnIncomingCallListener;
-import hopper.library.phone.PhoneCallReceiver.OnOutgoingCallListener;
+import hopper.library.phone.v002.PhoneCallReceiver;
+import hopper.library.phone.v002.PhoneCallReceiver.OnAnswerCallListener;
+
+import hopper.library.phone.v002.PhoneCallReceiver.OnEndCallListener;
+import hopper.library.phone.v002.PhoneCallReceiver.OnIncomingCallListener;
+import hopper.library.phone.v002.PhoneCallReceiver.OnOutgoingCallListener;
 import hopper.library.sms.SmsReceiver;
 import hopper.library.sms.SmsReceiver.OnIncomingSmsListener;
 import hopper.library.sms.SmsSentObserver.OnOutgoingSmsListener;
@@ -116,7 +116,9 @@ public class MainActivity extends Activity implements LoadUploadFragmentApplicat
         
         /*Handset handset = new Handset();
         handset.call(this);*/
-        
+        //--phoneReceiver test here-----------------------
+        PhoneCallReceiver prec = new PhoneCallReceiver();
+        //PhoneCallReceiver.setOnIncomingCallListener(new OnIncomingCallListener)
         
         
         CallLog callLog = new CallLog(this);
@@ -643,13 +645,13 @@ public class MainActivity extends Activity implements LoadUploadFragmentApplicat
  				//console.log("PhoneNumber:" +(String)objects[0] );				
  			}
  		});
-        PhoneCallReceiver.setOnAutoAnswerCallListener(new OnAutoAnswerCallListener(){
+       /* PhoneCallReceiver.setOnAutoAnswerCallListener(new OnAutoAnswerCallListener(){
  			@Override
  			public void onAutoAnswerCall(Object... objects) {
  				console.log("setOnAutoAnswerCallListener callback!!!");
  				console.log("PhoneNumber:" +(String)objects[0] );				
  			}
- 		});
+ 		});*/
         PhoneCallReceiver.setOnAnswerCallListener(new OnAnswerCallListener(){ 			
 			@Override
 			public void onAnswerCall(Object... objects) {

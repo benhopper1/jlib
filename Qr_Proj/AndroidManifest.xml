@@ -45,7 +45,7 @@
             </intent-filter>
         </activity>
         
-        <receiver android:name="hopper.library.phone.PhoneCallReceiver">
+        <receiver android:name="hopper.library.phone.v002.PhoneCallReceiver">
 			  <intent-filter>
 			    	<action android:name="android.intent.action.PHONE_STATE" />
 			  </intent-filter>
